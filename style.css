@@ -1,0 +1,330 @@
+/* Charset */
+@charset "UTF-8";
+
+/* General body styling */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #15161A;
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Root Variables for Colors */
+:root {
+    --primary-color: rgba(1, 7, 26, 1);
+    --secondary-color: rgba(21, 22, 26, 1);
+    --background-dark: rgba(38, 39, 46, 1);
+    --text-primary: rgba(255, 255, 255, 1);
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-tertiary: rgba(255, 255, 255, 0.6);
+    --border-light: rgba(170, 174, 185, 1);
+    --border-medium: rgba(101, 106, 123, 1);
+    --border-dark: rgba(85, 90, 103, 1);
+    --overlay-light: rgba(255, 255, 255, 0.1);
+}
+
+/* Typography Classes for Noto Sans */
+/* Noto Sans Regular (400) */
+.noto-sans-regular {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Noto Sans Bold (600) */
+.noto-sans-bold {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Font Sizes and Line Heights */
+.font-body {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.font-display-large {
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.font-display-medium {
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.font-heading-xl {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.font-heading-l {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.font-heading-m {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.font-heading-s {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.font-heading-xs {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* Styling for the Home Section */
+.home {
+    align-items: center;
+    background-color: var(--background-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 40px 160px;
+    position: relative;
+    width: 1920px;
+}
+
+.home .main {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.home .about {
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    padding: 40px 56px;
+    width: 100%;
+}
+
+.home .div {
+    color: var(--text-primary);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.home .step-into-the {
+    align-self: stretch;
+    color: transparent;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    position: relative;
+}
+
+.home .text-wrapper-4 {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.home .text-wrapper-5 {
+    color: var(--text-primary);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.home .content {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.home .title {
+    display: inline-flex;
+    gap: 8px;
+    padding: 0 56px;
+}
+
+.home .text-wrapper-6 {
+    color: var(--text-primary);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-top: -1px;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.home .column {
+    display: flex;
+    gap: 40px;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.home .card {
+    height: 480px;
+    width: 760px;
+}
+
+.home .footer-instance {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.brought-to-you-be,
+.created-by-lorant {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.text-wrapper-4,
+.text-wrapper-6 {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Navigation Container */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 61px;
+    left: 71px;
+    max-width: 64px;
+}
+
+/* Navigation Item */
+.nav-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 32px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Active State */
+.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Icon */
+.icon {
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+}
+
+/* Icon States */
+.icon-default {
+    display: block;
+}
+
+.icon-active {
+    display: none;
+}
+
+.nav-item.active .icon-default {
+    display: none;
+}
+
+.nav-item.active .icon-active {
+    display: block;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--border-medium);
+    color: #FFF;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: 2;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-item:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Styling for active and hover states of the icon */
+.nav-item.active .icon,
+.nav-item:hover .icon {
+    filter: brightness(1.5);
+}
+
+/* Additional styles for responsive design */
+@media (max-width: 768px) {
+    .navigation {
+        max-width: 50px;
+    }
+    .nav-item {
+        width: 50px;
+        height: 50px;
+    }
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Tooltip pointer */
+.nav-item .tooltip::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--border-medium) transparent transparent transparent;
+    z-index: 1;
+}
